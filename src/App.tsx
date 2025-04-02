@@ -4,8 +4,12 @@ import Navbar from "./Components/Navbar.tsx";
 
 const App = () => {
     const [frameZoom, setFrameZoom]= useState<boolean>(false)
+    const [activePage, setActivePage] = useState<number>(0)
     const toggle = () => {
         setFrameZoom(!frameZoom)
+    }
+    const handleNavClick = (pageIndex:number) => {
+        setActivePage(pageIndex)
     }
     return (
         <div className='w-full h-screen grid place-items-center'>
@@ -15,7 +19,7 @@ const App = () => {
               max-h-[90vh] border border-gray-300 rounded-2xl resize overflow-auto relative transition-all duration-300
             '`}>
                 <Controls frameZoom={frameZoom} toggleFrameZoom={toggle}/>
-                <Navbar/>
+                <Navbar handleNavClick={handleNavClick} activePage={activePage}/>
             </div>
         </div>
     )
