@@ -1,7 +1,7 @@
 import {navItems} from "../assests/data.ts";
 const Navbar = ({handleNavClick, activePage}:{handleNavClick:()=>void, activePage:number}) => {
     return (
-        <div className="2xl:w-80 xl:w-52 w-44 h-149 bg-blue-600 flex flex-col justify-between pt-5 pl-6 pb-14 md:pb-0">
+        <div className="2xl:w-80 xl:w-52 w-44 h-full bg-blue-600 flex flex-col justify-between pt-5 pl-6 pb-14 md:pb-0 pr-10">
             <a href="#" className={"2xl:test-2xl xl:test-xl font-b0ld text-white tracking-wider"}>
                 Apple products
             </a>
@@ -17,7 +17,7 @@ const Navbar = ({handleNavClick, activePage}:{handleNavClick:()=>void, activePag
                     </a>
                 ))}
             </div>
-            <div className={"flex justify-between pr-6 pb-2"}>
+            <div className={"flex justify-between pr-6 pb-2 max-sm:pb-0"}>
                 <a href={"#"}>
                     <i className={"bx bxl-instagram text-2xl text-white"}></i>
                 </a>

@@ -2,7 +2,7 @@ import {items} from "../assests/data.ts";
 
 const Home = () => {
     return (
-        <div className={"w-full h-full grid grid-cols-2 gap-rows-2 gap-4 bg-gray-50"}>
+        <div className={"w-full h-full grid grid-cols-2 gap-rows-2 gap-4 bg-gray-50 max-sm:grid-cols-1 max-sm:grid-rows-4"}>
             {items.map((item) => (
                 <div className="flex flex-col flex-grow items-center justify-center bg-white" key={Math.random()}>
                 <span
@@ -10,9 +10,9 @@ const Home = () => {
                     {item.label}
                 </span>
                     <img
-                        src={"images/iphone.jpg"}
+                        src={item.img}
                          alt={item.label}
-                        className={"max-w-[65%] max-h-[65%] object-center"}
+                        className={"max-w-[40%] max-h-[35%] object-center max-[600px]:hidden"}
                         draggable={false}
                     />
                 </div>
