@@ -1,7 +1,8 @@
 import Controls from "./Components/Controls.tsx";
 import {useState} from "react";
 import Navbar from "./Components/Navbar.tsx";
-import Home from "./Components/Home.tsx";
+ import Home from "./Components/Home.tsx";
+import Iphone from "./Components/Iphone.tsx";
 
 const App = () => {
     const [frameZoom, setFrameZoom]= useState<boolean>(false)
@@ -22,7 +23,8 @@ const App = () => {
                 <Navbar handleNavClick={handleNavClick} activePage={activePage}/>
                 <Controls frameZoom={frameZoom} toggleFrameZoom={toggle}/>
                 <div className={'flex-grow'}>
-                    <Home/>
+                    {/*<Home/>*/}
+                    <Iphone/>
                 </div>
             </div>
         </div>
