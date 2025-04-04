@@ -1,40 +1,40 @@
-type navItems = {
+export type navItems = {
     label: string;
     icon: string;
     activeIcon: string;
     inactiveIcon: string;
 }
-type items = {
+export type items = {
     label: string;
     img: string;
     pageIndex: number;
 }
-type iphoneModels = {
+export type iphoneModels = {
     name: string;
     description: string;
     price: string;
     img: string;
 }
-type colors = {
+export type colors = {
     label: string;
     bg: string;
     img: string;
 }
-type macbookModels ={
+export type macbookModels ={
     chip: string;
     price: string;
     img: string;
     colors: colors[];
-    specs:object
+    specs:string[]
     icon: string;
 }
-type watchModels = {
+export type watchModels = {
     imgs: object;
     name: string;
     price: string;
     desc: object;
 }
-type imacModels = {
+export type imacModels = {
     label: string;
     bg: string;
     images:object

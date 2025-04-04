@@ -6,7 +6,7 @@ const Navbar = ({handleNavClick, activePage}:{handleNavClick:()=>void, activePag
                 Apple products
             </a>
             <div className={"flex flex-col flex-grow"}>
-                {navItems.map((item, index: number) => (
+                {navItems.map((item, index:number) => (
                     <a href={'#'} key={Math.random()}
                        className={"xl:w-36 lg:w-34 w-30 flex items-center justify-between my-3.5 text text-left cursor-pointer"}
                        onClick={() => handleNavClick(index)}

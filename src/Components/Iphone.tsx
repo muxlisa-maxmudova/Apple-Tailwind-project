@@ -7,7 +7,7 @@ const Iphone = () => {
                  Which Iphone is right for you?
             </h3>
             <div className={`flex justify-between w-full`}>
-                {iphoneModels.map((item) => (
+                {iphoneModels.map((item:iphoneModels) => (
                     <div className={`flex flex-col items-center justify-between gap-y-2`} key={Math.random()}>
                         <img
                             src={item.img}
