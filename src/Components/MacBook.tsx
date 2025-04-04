@@ -60,7 +60,7 @@ const MacBook = () => {
                             </span>
                         ))}
                     </div>
-                    <button className={`w-min text-sm py-1 px-3 bg-blue-400 text-white rounded-full mt-4 md:mt-0`}>
+                    <button className={`w-min text-sm py-1 px-3 bg-blue-400 text-white rounded-full mt-4 mb-5 md:mt-0`}>
                         Buy
                     </button>
                 </div>
