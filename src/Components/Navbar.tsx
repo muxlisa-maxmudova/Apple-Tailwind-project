@@ -9,7 +9,7 @@ const Navbar = ({handleNavClick, activePage}:{handleNavClick:()=>void, activePag
                 {navItems.map((item, index:number) => (
                     <a href={'#'} key={Math.random()}
                        className={"xl:w-36 lg:w-34 w-30 flex items-center justify-between my-3.5 text text-left cursor-pointer"}
-                       onClick={() => handleNavClick(index)}
+                       onClick={()=>handleNavClick(index)}
                     >
                         <i className={item.icon}></i>
                         <span className={"text-sm text-gray-50 mr-auto mx-2.5 tracking-wider"}>{item.label}</span>

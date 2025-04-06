@@ -25,7 +25,7 @@ const App = () => {
                 <Controls frameZoom={frameZoom} toggleFrameZoom={toggle}/>
                 <div className={'flex-grow'}>
                     {/*<Home/>*/}
-                    {/*<Iphone/>*/}
+                    {/*/!*<Iphone/>*!/*/}
                     <MacBook/>
                 </div>
             </div>
