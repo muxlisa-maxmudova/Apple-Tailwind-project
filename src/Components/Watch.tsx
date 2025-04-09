@@ -7,17 +7,18 @@ const Watch = () => {
             </h1>
             <div className={`w-full flex justify-around`}>
                 {watchModels.map((watchModel:watchModels) => (
-                    <div className={`w-60 h-[430px] flex flex-col justify-around`}>
+                    <div className={`w-60 h-[430px] flex flex-col justify-around group`}>
                         <div key={Math.random()} className={`w-full h-64 mb-4 overflow-hidden relative`}>
                             <img
-                                src={watchModel.imgs[0]}
+                                src={`images/watch10-side.png`}
                                 alt={watchModel.name}
-                                className={`absolute w-full h-full object-contain opacity-100 group-hover:opacity-0 transition duration-300]`}
+                                className={`absolute w-full h-full object-contain opacity-100 group-hover:opacity-0 transition duration-400
+`}
                             />
                             <img
-                                src={watchModel.imgs[1]}
+                                src={`images/watch10.png`}
                                 alt={watchModel.name}
-                                className={`absolute w-full h-full object-contain opacity-0 group-hover:opacity-100 transition duration-300]`}
+                                className={`absolute w-full h-full object-contain opacity-0 group-hover:opacity-100 transition duration-400`}
                             />
                         </div>
                         <h3 className={`2xl:text-xl xl:text-lg text-sm font-semibold`}>
