@@ -10,13 +10,13 @@ const Watch = () => {
                     <div className={`w-60 h-[430px] flex flex-col justify-around group`}>
                         <div key={Math.random()} className={`w-full h-64 mb-4 overflow-hidden relative`}>
                             <img
-                                src={`images/watch10-side.png`}
+                                src={watchModel.imgs[0]}
                                 alt={watchModel.name}
                                 className={`absolute w-full h-full object-contain opacity-100 group-hover:opacity-0 transition duration-400
 `}
                             />
                             <img
-                                src={`images/watch10.png`}
+                                src={watchModel.imgs[1]}
                                 alt={watchModel.name}
                                 className={`absolute w-full h-full object-contain opacity-0 group-hover:opacity-100 transition duration-400`}
                             />

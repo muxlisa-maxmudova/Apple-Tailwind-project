@@ -5,6 +5,7 @@ import Navbar from "./Components/Navbar.tsx";
 // import Iphone from "./Components/Iphone.tsx";
 import MacBook from "./Components/MacBook.tsx";
 import Watch from "./Components/Watch.tsx";
+import IMac from "./Components/IMac.tsx";
 
 const App = () => {
     const [frameZoom, setFrameZoom]= useState<boolean>(false)
@@ -28,7 +29,8 @@ const App = () => {
                     {/*<Home/>*/}
                     {/*/!*<Iphone/>*!/*/}
                     {/*<MacBook/>*/}
-                    <Watch/>
+                    {/*<Watch/>*/}
+                    <IMac/>
                 </div>
             </div>
         </div>

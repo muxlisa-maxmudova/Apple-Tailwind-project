@@ -1,3 +1,8 @@
+type objectProp = {
+    side: string;
+    front: string;
+    back: string;
+}
 export type navItems = {
     label: string;
     icon: string;
@@ -37,7 +42,7 @@ export type watchModels = {
 export type imacModels = {
     label: string;
     bg: string;
-    images:object
+    images: objectProp
 }
 
 export const navItems:navItems[] = [ //we added [] since in it is inside an array
