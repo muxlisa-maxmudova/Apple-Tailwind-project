@@ -1,4 +1,5 @@
 import { useEffect, useState} from "react";
+import * as React from "react";
 
 const PageTransition = ({activePage, children}:{activePage:number}) => {
     const [currentPage, setCurrentPage] = useState(activePage);

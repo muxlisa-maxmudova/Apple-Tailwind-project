@@ -10,12 +10,15 @@ import MacBook from "./Components/MacBook.tsx";
 
 const App = () => {
     const [frameZoom, setFrameZoom]= useState<boolean>(false)
-    const [activePage, setActivePage] = useState<number>(0)
+    const [activePage, setActivePage] = useState(0)
     const toggle = () => {
         setFrameZoom(!frameZoom)
     }
-    const handleNavClick = (pageIndex:number) => {
+    const handleNavClick = (pageIndex?:number|undefined):void => {
         setActivePage(pageIndex)
+    }
+    const resetPage = () => {
+        setActivePage(0)
     }
     return (
         <div className='w-full h-screen grid place-items-center'>
@@ -25,7 +28,7 @@ const App = () => {
               max-h-[95vh] border border-gray-300 rounded-2xl resize overflow-auto relative transition-all duration-300 flex
             '`}>
                 <Navbar handleNavClick={handleNavClick} activePage={activePage}/>
-                <Controls frameZoom={frameZoom} toggleFrameZoom={toggle}/>
+                <Controls frameZoom={frameZoom} toggleFrameZoom={toggle} resetPage={resetPage} activePage={activePage}/>
                 <div className={'flex-grow'}>
                     <PageTransition activePage={activePage}>
                         <Home/>
