@@ -11,7 +11,7 @@ const MacBook = () => {
         setSelectedColor(0)
     }
     return (
-        <div className={`flex flex-col items-center justify-around bg-white p-8`}>
+        <div className={`flex flex-col h-full items-center justify-around bg-white p-8`}>
             <h1 className={`2xl:text-4xl xl:text-3xl md:text-2xl font-semibold text-gray-800 mb-5`}>
                 Choose Your New MackBook AIR
             </h1>
@@ -19,7 +19,7 @@ const MacBook = () => {
                 {macbookModels.map((item:macbookModels, index:number) => (
                     <button key={Math.random()}
                             onClick={() => {handleSelectedChip(index)}}
-                        className={`2xl:w-36 md:w-26 w-28 2xl:hue-rotate-180 md:h-13 h-13 flex flex-col justify-evenly items-center border ${index === 0 ? 'rounded-l-xl' : 'rounded-r-xl'} cursor-pointer`}>
+                            className={`2xl:w-36 md:w-26 w-28 2xl:hue-rotate-180 md:h-13 h-13 flex flex-col justify-evenly items-center border ${index === 0 ? 'rounded-l-xl' : 'rounded-r-xl'} cursor-pointer`}>
                     <span className={`2xl:text-lg xl:text-sm text-xs font-bold text-gray-800`}>
                         With {item.chip} chip
                     </span>
@@ -29,12 +29,12 @@ const MacBook = () => {
                     </button>
                 ))}
             </div>
-            <div className={`flex flex-col 2xl:p-4 md:items-start item-center`}>
-                <div className={`w-80 h-64 2xl:mb-0 mb-8`}>
+            <div className={` flex flex-col 2xl:p-4 md:items-start item-center`}>
+                <div className={`w-80 h-auto 2xl:mb-0 mb-8`}>
                     <img
                         src={currentColor.img}
                         alt={currentMb.chip}
-                        className={`2xl:w-72 xl:w-52 w-full h-full 2xl:mt-0 sm:mt-6 `}/>
+                        className={`2xl:w-72 xl:w-52 w-full 2xl:mt-0 sm:mt-6 `}/>
                     <span className={`2xl:text-lg xl:text-sm font-medium text-gray-800 mb-2 text-center md:text-left`}>
                         {currentColor.label}
                     </span>
@@ -52,7 +52,7 @@ const MacBook = () => {
                         ))}
                     </div>
                     <img
-                    src={currentMb.icon} alt={currentMb.chip} className={`w-12 h-12 2xl:mb-2 xl:mb-2`}/>
+                        src={currentMb.icon} alt={currentMb.chip} className={`w-12 h-12 2xl:mb-2 xl:mb-2`}/>
                     <div>
                         {currentMb.specs.map((spec) => (
                             <span key={Math.random()} className={`2xl:text-lg xl:text-base font-semibold text-gray-800 mb-5 `}>

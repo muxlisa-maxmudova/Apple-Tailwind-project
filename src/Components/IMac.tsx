@@ -28,15 +28,22 @@ const IMac = () => {
             </div>
             <div
                 className="absolute md:top-1/2 top-3/4 md:left-4 left-12 transform -translate-y-1/2 flex flex-col lg:space-y-2 space-y-1 bg-gray-50 p-2 rounded">
-                <div className="flex items-center space-x-2">
-                    <button
-                        className="2xl:w-8 md:w-5 w-4 2xl:h-8 md:h-5 h-4 rounded-full flex items-center justify-center bg-[#10505b]">
-                    </button>
-                    <span className="text">Green</span>
-                    <button type={"button"} className={`text-sm mt-4 w-min py-1 px-2 bg-blue-400 rounded-full text-white cursor-pointer hover:bg-teal-500`}>
-                        Shop
-                    </button>
-                </div>
+                {imacModels.map((model) => (
+                    <div key={Math.random()} className="flex items-center space-x-2">
+                        <button
+                            style={{backgroundColor: model.bg}}
+                            className={`2xl:w-8 md:w-5 w-4 2xl:h-8 md:h-5 h-4 rounded-full flex items-center justify-center bg-[#10505b] ${selectedColor === model.label.toLowerCase() && 'border-2 border-blue-500'}`}
+                            onClick={() => {
+                                setSelectedColor(model.label.toLowerCase());
+                                setVisibleLabel(model.label)
+                            }}></button>
+                        {visibleLabel === model.label && <span className={`text-sm`}>{model.label}</span>}
+                    </div>
+                ))}
+                <button type={"button"}
+                        className={`text-sm mt-4 w-min py-1 px-2 bg-blue-400 rounded-full text-white cursor-pointer hover:bg-teal-500`}>
+                    Shop
+                </button>
             </div>
 
         </div>
